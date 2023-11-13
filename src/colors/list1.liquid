@@ -1,0 +1,43 @@
+---
+title: List
+description: A list of all colors in the design system.
+date: 2023-08-03
+tags: colors
+layout: colors
+css: style-classless.css
+---
+<table>
+  <thead>
+    <tr>
+      <th scope="col">variable</th>
+      <th scope="col">base</th>
+      <th scope="col">alpha</th>
+      <th scope="col">light</th>
+      <th scope="col">simple</th>
+      <th scope="col">dark</th>
+      <th scope="col">simple</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% assign variables = colorList | sort: "no" %}
+    {%- for colors in variables %}
+      <tr>
+        <td>{{ colors.variable }}</td>
+        <td>{{ colors.color-light }}</td>
+        <td>{{ colors.alpha-light }}</td>
+        <td>
+          <button style="background-color:{{ colors.light }}";></button>
+        </td>
+        <td>
+          <button style="background-color:{{ colors.hsl-light-simple }}";></button>
+        </td>
+        <td>
+          <button style="background-color:{{ colors.dark }}";></button>
+        </td>
+        <td>
+          <button style="background-color:{{ colors.hsl-dark-simple }}";></button>
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>

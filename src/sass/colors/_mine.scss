@@ -1,0 +1,78 @@
+:root {
+  --primary: 150;
+  --secondary: calc(var(--primary) + 180);
+  --link: calc(var(--primary) + 30);
+  --active: calc(var(--primary) - 30);
+
+  --gray6: 40%;
+  --gray7: 25%;
+  --gray8: 20%;
+  --gray9: 5%;
+
+  --100: 95%;
+  --200: 90%;
+  --300: 85%;
+  --400: 75%;
+  --500: 50%;
+  --600: 40%;
+  --700: 30%;
+  --800: 25%;
+  --900: 20%;
+
+  --primary100: hsl(var(--primary) var(--gray7) var(--100));
+  --primary200: hsl(var(--primary) var(--gray7) var(--200));
+  --primary300: hsl(var(--primary) var(--gray7) var(--300));
+  --primary400: hsl(var(--primary) var(--gray7) var(--400));
+  --primary500: hsl(var(--primary) var(--gray7) var(--500));
+  --primary600: hsl(var(--primary) var(--gray7) var(--600));
+  --primary700: hsl(var(--primary) var(--gray7) var(--700));
+  --primary800: hsl(var(--primary) var(--gray7) var(--800));
+  --primary900: hsl(var(--primary) var(--gray7) var(--900));
+  --secondary100: hsl(var(--secondary) var(--gray9) var(--100));
+  --secondary200: hsl(var(--secondary) var(--gray9) var(--200));
+  --secondary300: hsl(var(--secondary) var(--gray9) var(--300));
+  --secondary400: hsl(var(--secondary) var(--gray9) var(--400));
+  --secondary500: hsl(var(--secondary) var(--gray9) var(--500));
+  --secondary600: hsl(var(--secondary) var(--gray9) var(--600));
+  --secondary700: hsl(var(--secondary) var(--gray9) var(--700));
+  --secondary800: hsl(var(--secondary) var(--gray9) var(--800));
+  --secondary900: hsl(var(--secondary) var(--gray9) var(--900));
+  --link600: hsl(var(--link) var(--gray6) var(--600));
+  --link900: hsl(var(--link) var(--gray6) var(--900));
+  --active600: hsl(var(--active) var(--gray6) var(--600));
+  --active900: hsl(var(--active) var(--gray6) var(--900));
+}
+
+body {
+  font: 1em/160% Inter, sans-serif;
+  background-color: var(--primary100);
+  color: var(--secondary900);
+}
+
+a {
+  color: var(--link600);
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: var(--active600);
+  }
+}
+
+p {
+  &:not(:last-child) {
+    margin-bottom: 1.5em;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 120%;
+  margin-top: 1.5em;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  font-family: Nunito, sans-serif;
+  color: var(--secondaryDark500);
+}
