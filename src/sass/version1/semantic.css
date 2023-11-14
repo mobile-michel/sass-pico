@@ -1,0 +1,165 @@
+/* Theming */
+:root{
+    --white: #f9f9f9;
+    --black: #36383F;
+    --grey: #85888C;
+    --primary-color: hsl(144, 50%, 40%);
+    --secondary-color: hsl(10, 50%, 30%);
+    --background-color: #f9f9f9;
+    --text-color:  #36383F;
+}
+
+/* Reset */
+header * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--background-color);
+    font-family: sans-serif;
+    margin: 0;
+}
+
+header a{
+    text-decoration: none;
+}
+
+header ul{
+    list-style: none;
+}
+
+main {
+    margin: 1em;
+    margin-top: 100px;
+}
+
+/* Header */
+header{
+    background-color: var(--primary-color);
+    box-shadow: 1px 1px 5px 0px var(--text-color);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* Logo */
+header > a {
+    display: inline-block;
+    color: var(--background-color);
+    font-size: 60px;
+    margin-left: 10px;
+}
+
+/* Nav menu */
+nav {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: var(--primary-color);
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+nav ul a{
+    display: block;
+    padding: 30px;
+    color: var(--background-color);
+}
+
+nav ul a:hover{
+    background-color: var(--secondary-color);
+}
+
+/* Menu Icon */
+label {
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}
+
+label span {
+    background: var(--background-color);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+}
+
+label span::before,
+label span::after{
+    background: var(--background-color);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+label span::before{
+    top: 5px;
+}
+
+label span::after{
+    top: -5px;
+}
+
+input {
+    display: none;
+}
+
+/* Toggle menu icon */
+input:checked ~ nav{
+    max-height: 100%;
+}
+
+input:checked ~ label span {
+    background: transparent;
+}
+
+input:checked ~ label span::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+
+input:checked ~ label span::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+/* Responsiveness */
+@media (min-width: 768px) {
+    nav[aria-label="primary"]{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+    }
+
+    nav[aria-label="primary"] ul li{
+        float: left;
+    }
+
+    nav[aria-label="primary"] ul a:hover{
+        background-color: transparent;
+        color: var(--secondary-color);
+    }
+
+    li[aria-current="page"]{
+        background-color: var(--secondary-color);
+    }
+
+    nav[aria-label="primary"] li[aria-current="page"] a:hover{
+        color: var(--background-color);
+    }
+    
+    body>header label{
+        display: none;
+    }
+
+}
