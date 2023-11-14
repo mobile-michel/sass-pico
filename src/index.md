@@ -1,8 +1,8 @@
 ---
-title: Welcome
+title: Home
 description: Basic template with Eleventy, LiquidJS & Sass processing.
+date: 2023-11-03
 layout: base
-tags: primary
 css: style.css
 ---
 

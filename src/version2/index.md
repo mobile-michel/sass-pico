@@ -1,8 +1,8 @@
 ---
-title: Home
+title: Version 2
 description: A Sass workflow
 layout: base-v2
-stylesheet: simple-sass
+css: version2/simple-sass
 tags: primary
 ---
 ## Simple.css Framework Sections

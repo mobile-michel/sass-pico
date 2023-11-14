@@ -1,6 +1,9 @@
 ---
-title: My first page
+title: Version 1
+date: 2023-11-02
 layout: base-nav
+tags: primary
+css: version1/pico.css
 ---
 
 The first paragraph.
