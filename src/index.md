@@ -6,4 +6,8 @@ layout: base
 css: style.css
 ---
 
-The first paragraph with **{{layout}}** layout.
+# Versions of Pico.css framework
+
+- Version colors
+- Version 1
+- Version 2
