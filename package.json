@@ -8,6 +8,7 @@
         "watch:sass": "npx sass src/sass:_site/assets/css --watch",
         "start": "npm run watch:eleventy & npm run watch:sass",
         "build": "sass src/sass:_site/assets/css --style=compressed && eleventy",
+        "build-gp": "sass src/sass:_site/assets/css --style=compressed && eleventy --pathprefix='sass-pico'",
         "debug": "DEBUG=* eleventy"
     },
     "keywords": [

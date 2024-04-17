@@ -6,16 +6,16 @@ tags: version1
 <!-- Navigation bar -->
 <header class="header">
         <!-- Logo -->
-        <a href="#" class="logo">LR</a>
+        <a href="{{ '/' | url }}" class="logo">LR</a>
         <!-- Hamburger icon -->
         <input class="side-menu" type="checkbox" id="side-menu"/>
         <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
         <!-- Menu -->
         <nav class="nav">
             <ul class="menu">
-                <li><a href="fixe.html">Fixe</a></li>
-                <li><a href="relative.html">Relative</a> </li>
-                <li><a href="sticky.html">Sticky</a></li>
+                <li><a href="{{ 'fixe.html' | url }}">Fixe</a></li>
+                <li><a href="{{ 'relative.html' | url }}">Relative</a> </li>
+                <li><a href="{{ 'sticky.html' | url }}">Sticky</a></li>
             </ul>
         </nav>
     </header>

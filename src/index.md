@@ -3,7 +3,7 @@ title: Home
 description: Basic template with Eleventy, LiquidJS & Sass processing.
 date: 2023-11-03
 layout: base
-css: style.css
+css: /assets/css/style.css
 ---
 
 # Versions of Pico.css framework

@@ -2,13 +2,13 @@
 title: Typography
 description: These are all the typographic HTML elements.
 layout: elements
-stylesheet: simple
+stylesheet: /assets/css/simple
 tags: version2
 ---
 <ul>
   {% for nav in collections.typography reversed %}
     <li {% if page.url == nav.url %}aria-current="page"{% endif %}>
-      <a href="{{ nav.url }}">{{ nav.data.title }}</a>
+      <a href="{{ nav.url | url }}">{{ nav.data.title }}</a>
     </li>
   {% endfor %}
 </ul>

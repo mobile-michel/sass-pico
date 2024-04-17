@@ -7,7 +7,7 @@
     <meta name="description" content="{{ site.description }}">
     <link rel="icon" href="{{ site.favicon }}" type="image/svg+xml">
     <title>{{ title }} - {{ site.name }}</title>
-    <link rel="stylesheet" href="/assets/css/{{ stylesheet }}.css">
+    <link rel="stylesheet" href="{{ stylesheet | url }}.css">
   </head>
   <body>
     {% include 'header' %}
